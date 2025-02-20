@@ -3,8 +3,11 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiZ3VvZG9uZ2RvbmciLCJhIjoiY20xZjYwN2xsMW4zeDJqc
 const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/guodongdong/cm6sqlagi000001pdeydmdof6',
-    center: [-73.9, 40.7], // 纽约皇后区
-    zoom: 11 // 适合展示图书馆的缩放级别
+    zoom: 10,
+    center: [-73.9, 40.7],
+    maxZoom: 14,
+    minZoom: 6,
+    maxBounds: [[-75, 39.5], [-71.5, 41.5]]
 });
 
 map.on('load', function () {
@@ -43,30 +46,61 @@ map.on('load', function () {
             ],
         }
     }, firstSymbolId);
-
-    // 添加人口密度地图 (Census Tracts)
-    map.addSource('censusData', {
-        'type': 'geojson',
-        'data': 'data/2020_Census_Tracts_manual.geojson'
+    
+        // 加载 Natural Breaks 数据
+        map.addSource('equal_intervals', {
+            type: 'geojson',
+            data: 'data/equal_intervals.geojson'
+        });
+    
+        // 添加 Natural Breaks 图层
+        map.addLayer({
+            'id': 'equal_intervals_layer',
+            'type': 'fill',
+            'source': 'equal_intervals',
+            'paint': {
+                'fill-color': [
+                    'step', ['get', 'equal_intervals'],
+                    '#f7fcfd', 0,  // 最低组
+                    '#ccece6', 1,  // 第二组
+                    '#66c2a4', 2,  // 第三组
+                    '#238b45', 3,  // 第四组
+                    '#005824'     // 最高组
+                ],
+                'fill-opacity': 0.7,
+                'fill-outline-color': '#000'
+            }
+        }, 'libraryLayer');
     });
 
-    map.addLayer({
-        'id': 'censusLayer',
-        'type': 'fill',
-        'source': 'censusData',
-        'layout': {},
-        'paint': {
-            'fill-color': [
-                'interpolate',
-                ['linear'], ['get', 'Shape_Area'],
-                1000000, '#00441b',  // 最小区域（高密度）→ 深绿色
-                2000000, '#006d2c',  
-                3000000, '#238b45',  
-                5000000, '#41ae76',  
-                10000000, '#99d8c9'  // 最大区域（低密度）→ 浅绿色
-            ],
-            'fill-opacity': 0.5,  // 透明度 50%
-            'fill-outline-color': '#004d4d'  // 深绿色边界
+    var toggleableLayerIds = ['equal_intervals_layer'];
+
+
+for (var i = 0; i < toggleableLayerIds.length; i++) {
+    var id = toggleableLayerIds[i];
+
+    var link = document.createElement('a');
+    link.href = '#';
+    link.className = 'active';
+    link.textContent = id;
+
+    link.onclick = function(e) {
+        var clickedLayer = this.textContent;
+        e.preventDefault();
+        e.stopPropagation();
+
+        var visibility = map.getLayoutProperty(clickedLayer, 'visibility');
+
+        if (visibility === 'visible') {
+            map.setLayoutProperty(clickedLayer, 'visibility', 'none');
+            this.className = '';
+        } else {
+            this.className = 'active';
+            map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
         }
-    }, 'libraryLayer'); // 让 Census Layer 位于 Library Layer 之下
-});
+    };
+
+    var layers = document.getElementById('menu');
+    layers.appendChild(link);
+}
+    
