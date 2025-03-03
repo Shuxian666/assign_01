@@ -99,10 +99,12 @@ body {
   /* ✅ 修正：确保项目水平排列 */
   .projects-container {
     display: flex; /* 让项目水平排列 */
+    flex-wrap: wrap; /* 允许换行，防止超出屏幕 */
     justify-content: space-between; /* 让项目平均分布 */
     gap: 1rem; /* 控制项目之间的间距 */
     width: 100%; /* 确保它填充整个父容器 */
-  }
+}
+
   
   /* ✅ 修正：确保每个项目垂直排列 */
   .project {
