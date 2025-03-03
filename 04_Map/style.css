@@ -1,15 +1,41 @@
-/* 地图标题样式 */
-#map-title {
+/* 让整个标题区域居中 */
+#map-header {
     position: absolute;
-    top: 10px;  /* 离顶部 10px */
+    top: 10px;
     left: 50%;
-    transform: translateX(-50%); /* 让标题居中 */
-    background: rgba(255, 255, 255, 0.8);  /* 半透明背景 */
-    padding: 10px 20px;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 5px;
-    text-align: center;
+    transform: translateX(-50%); /* 居中 */
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px 25px;
+    border-radius: 8px;
+    text-align: center; /* ✅ 确保所有文字居中 */
+    width: 50%;  /* ✅ 让标题区域有合适的宽度 */
+    max-width: 600px; /* ✅ 限制最大宽度，避免过长 */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    z-index: 1000; /* 确保在最上层 */
+    z-index: 1000;
+}
+
+/* 主标题 */
+#map-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 副标题 */
+#map-subtitle {
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* 说明文本 */
+#map-description {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+    text-align: left; /* ✅ 让文本居中 */
+    max-width: 90%; /* ✅ 确保宽度不会超出标题框 */
+    margin-left: auto;
+    margin-right: auto;
 }
