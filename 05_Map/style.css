@@ -1,0 +1,28 @@
+#charts {
+    margin-top: 2rem;
+  }
+  
+  .chart {
+    margin-bottom: 10rem;  /* 增加底部间距 */
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ddd;  /* 可选：加分隔线 */
+    text-align: center;
+  }
+  
+  .chart img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+  }
+  
+  .chart p {
+    font-family: 'Overpass', sans-serif;
+    font-size: 14px;
+    color: #3653a5;
+    margin: 0 auto;
+    max-width: 800px;  /* 限制文字过长行 */
+    padding: 0 1rem;
+  }
+  
