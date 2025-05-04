@@ -26,3 +26,29 @@
     padding: 0 1rem;
   }
   
+  #colab-link {
+    margin-top: 3rem;
+    text-align: center;
+  }
+  
+  #colab-link h2 {
+    font-family: 'Overpass', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #3653a5;
+    margin-bottom: 0.5rem;
+  }
+  
+  #colab-link p {
+    font-family: 'Overpass', sans-serif;
+    font-size: 14px;
+    color: #3653a5;
+  }
+  
+  #colab-link a {
+    color: #fa75be;
+    border-bottom: 1px solid #fbff00;
+    text-decoration: none;
+    word-break: break-all;
+  }
+  
