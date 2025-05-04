@@ -1,73 +1,47 @@
-mapboxgl.accessToken = 'pk.eyJ1IjoiZ3VvZG9uZ2RvbmciLCJhIjoiY20xZjYwN2xsMW4zeDJqcHBkbDlzam8yeCJ9.wZeYNDrxRmkwQqEnail5XQ'; 
+mapboxgl.accessToken = 'pk.eyJ1IjoiZ3VvZG9uZ2RvbmciLCJhIjoiY20xZjYwN2xsMW4zeDJqcHBkbDlzam8yeCJ9.wZeYNDrxRmkwQqEnail5XQ';
 
 const map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/guodongdong/cm7c2bp3f000h01s35xhxfq26',
-    zoom: 10,
-    center: [-73.9, 40.7],
-    maxZoom: 14,
-    minZoom: 6,
-    maxBounds: [[-75, 39.5], [-71.5, 41.5]]
+    style: 'mapbox://styles/guodongdong/cm6sqlagi000001pdeydmdof6',
+    center: [0, 0],
+    zoom: 1.5
 });
 
 map.on('load', function () {
-    map.setProjection('equalEarth'); // 2D 视角
-    map.resize(); // 确保地图填充
+    map.setProjection('equalEarth');
+    map.resize();
 
-    // 加载 Equal Count 数据
-    map.addSource('equal_count', {
-        type: 'geojson',
-        data: 'data/equal_count.geojson'
-    });
+    let layers = map.getStyle().layers;
+    let firstSymbolId;
+    for (let i = 0; i < layers.length; i++) {
+        if (layers[i].type === 'symbol') {
+            firstSymbolId = layers[i].id;
+            break;
+        }
+    }
 
-    // 添加 Equal Count 图层
     map.addLayer({
-        'id': 'equal_count_layer',
-        'type': 'fill',
-        'source': 'equal_count',
-        'paint': {
-            'fill-color': [
-                'step', ['get', 'equal_count'],
-                '#f7fcfd', 0,  // 最低分组
-                '#ccece6', 1,  // 第二分组
-                '#66c2a4', 2,  // 第三分组
-                '#238b45', 3,  // 第四分组
-                '#005824'     // 最高分组
-            ],
-            'fill-opacity': 0.7,
-            'fill-outline-color': '#000'
+        id: 'fat_supply_layer',
+        type: 'fill',
+        source: {
+            type: 'geojson',
+            data: 'data/fat_supply_2022_combined.geojson'  // 确保路径正确或使用 URL
+        },
+        paint: {
+         'fill-color': [
+  'step', ['get', 'Fat_per_day'],
+  '#f7fcfd',        // <49.2
+  49.2, '#ccece6',
+  58.9, '#a8ddb5',
+  69.6, '#7bccc4',
+  83.3, '#4eb3d3',
+  100.8, '#2b8cbe',
+  112.6, '#0868ac',
+  125.9, '#084081',
+  141.8, '#081d58'
+],
+'fill-opacity': 0.8,
+'fill-outline-color': '#999'
         }
-    });
+    }, firstSymbolId);
 });
-
-var toggleableLayerIds = ['equal_count_layer'];
-
-
-for (var i = 0; i < toggleableLayerIds.length; i++) {
-    var id = toggleableLayerIds[i];
-
-    var link = document.createElement('a');
-    link.href = '#';
-    link.className = 'active';
-    link.textContent = id;
-
-    link.onclick = function(e) {
-        var clickedLayer = this.textContent;
-        e.preventDefault();
-        e.stopPropagation();
-
-        var visibility = map.getLayoutProperty(clickedLayer, 'visibility');
-
-        if (visibility === 'visible') {
-            map.setLayoutProperty(clickedLayer, 'visibility', 'none');
-            this.className = '';
-        } else {
-            this.className = 'active';
-            map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
-        }
-    };
-
-    var layers = document.getElementById('menu');
-    layers.appendChild(link);
-}
-    
