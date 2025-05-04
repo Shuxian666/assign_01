@@ -25,17 +25,27 @@
    <nav id="menu"></nav>
     <div id='map'></div>
     <div id='title' class="title">
-        <h1>2020 Census Track Shape Area</h1>
-        <p>Census Tracts from the 2020 US Census for New York City clipped to the shoreline. These boundary files are derived from the US Census Bureau's TIGER project and have been geographically modified to fit the New York City base map. Because some census tracts are under water not all census tracts are contained in this file, only census tracts that are partially or totally located on land have been mapped in this file.</p>
+        <h1>Daily per capita fat supply, 2022</h1>
+        <p>
+          Average daily per capita dietary fat supply, measured in grams per person per day.<br>
+          Data source: Food and Agriculture Organization of the United Nations<br>
+          Classification method: Equal intervals
+        </p>        
         <hr>
-        <div id="income-legend" class="legend">
-            <h4>Shape Area</h4>
-            <div><span style="background-color: #f7fcfd"></span>400550.32 - 39758411.4</div>
-            <div><span style="background-color: #ccece6"></span>39758411.4 - 79116272.5</div>
-            <div><span style="background-color: #66c2a4"></span>79116272.5 - 118474134</div>
-            <div><span style="background-color: #238b45"></span>118474134 - 157831995</div>
-            <div><span style="background-color: #005824"></span>157831995 - 197189856</div>
-        </div>
+        <div class="legend" id="fat-legend">
+          <h4>Daily Fat Supply (g/person/day)</h4>
+          <div><span style="background-color: #081d58;"></span> ≥167.6 g</div>
+          <div><span style="background-color: #084081;"></span> 148.6 – 167.6 g</div>
+          <div><span style="background-color: #0868ac;"></span> 129.6 – 148.6 g</div>
+          <div><span style="background-color: #2b8cbe;"></span> 110.6 – 129.6 g</div>
+          <div><span style="background-color: #4eb3d3;"></span> 91.5 – 110.6 g</div>
+          <div><span style="background-color: #7bccc4;"></span> 72.5 – 91.5 g</div>
+          <div><span style="background-color: #a8ddb5;"></span> 53.5 – 72.5 g</div>
+          <div><span style="background-color: #ccece6;"></span> 34.4 – 53.5 g</div>
+          <div><span style="background-color: #f7fcfd;"></span> 15.4 – 34.4 g</div>
+          <div><span style="background-color: #cccccc;"></span> No data</div>
+        </div>        
+        
     </div>
     <script src="./map.js"></script>
     <style>
