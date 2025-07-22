@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green Classrooms: After-School Learning in East Harlem Community Gardens</title>
+
+    <!-- Mapbox CSS -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;500;700&display=swap" rel="stylesheet" />
+
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: 'Overpass', sans-serif;
+      }
+
+      body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      header {
+       background-color: rgba(55, 197, 62, 0.3);
+       color: #b388eb;
+       padding: 1rem 2rem;
+       font-size: 1.5rem;
+       font-weight: 600;
+      }
+
+      main {
+        display: flex;
+        flex: 1;
+      }
+
+      #sidebar {
+       width: 350px;
+       padding: 1.5rem;
+       background-color: rgba(55, 197, 62, 0.3);
+       overflow-y: auto;
+       border-right: 1px solid #ccc;
+        color: #b388eb;
+      }
+
+      #sidebar h2 {
+        font-size: 1.2rem;
+        margin-top: 0;
+      }
+
+      #map {
+        flex: 1;
+        position: relative;
+      }
+
+      .section {
+        margin-bottom: 2rem;
+      }
+
+      .footer {
+       text-align: center;
+       padding: 1rem;
+       background-color: rgba(55, 197, 62, 0.3); /* #227c9d + 85% 不透明度 */
+       font-size: 0.9rem;
+      color: #8093f1; /* 建议加上文字颜色，确保对比度 */
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      Green Classrooms: After-School Learning in East Harlem Community Gardens
+    </header>
+
+    <main>
+      <div id="sidebar">
+        <div class="section">
+          <h2>Welcome</h2>
+          <p>This platform maps and explores the relationship between community gardens and after-school programs in East Harlem. By visualizing spatial data on green spaces and youth educational facilities, it reveals opportunities to support children's growth, learning, and wellbeing through nature-based urban design.</p>
+        </div>
+
+        <div class="section">
+          <h2>Instructions</h2>
+          <ul>
+            <li>Click points on the map to see details.</li>
+            <li>Click anywhere to generate a 5-minute walk zone.</li>
+            <li>Use this as a resource for your design proposals.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>Data Layers</h2>
+          <p>• Community Gardens<br>• Education Systems<br>• Isochrone Zones</p>
+        </div>
+      </div>
+
+      <div id="map"></div>
+    </main>
+
+    <div class="footer">
+       Shuxian Peng, Alexandra Gordon | ARCH 6133 Advanced Synthesis Places / Platforms | Cornell University | © 2025
+    </div>
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <script src="map.js"></script>
+  </body>
+</html>
