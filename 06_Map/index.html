@@ -1,113 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Green Classrooms: After-School Learning in East Harlem Community Gardens</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Green Classrooms: After-School Learning in East Harlem Community Gardens</title>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
 
-    <!-- Mapbox CSS -->
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;500;700&display=swap" rel="stylesheet">
+  
+<style>
+  * {
+    box-sizing: border-box;
+    font-family: 'Overpass', sans-serif;
+  }
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;500;700&display=swap" rel="stylesheet" />
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
 
-    <style>
-      * {
-        box-sizing: border-box;
-        font-family: 'Overpass', sans-serif;
-      }
-
-      body, html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-      }
-
-      header {
-       background-color: rgba(55, 197, 62, 0.3);
-       color: #b388eb;
-       padding: 1rem 2rem;
-       font-size: 1.5rem;
-       font-weight: 600;
-      }
+  header {
+    position: relative;
+    z-index: 11;
+    background-color: #dde5b6;
+    color: #b388eb;
+    padding: rem 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between; /* 左右排开标题和按钮 */
+    align-items: center;
+  }
 
       main {
         display: flex;
         flex: 1;
       }
 
-      #sidebar {
-       width: 350px;
-       padding: 1.5rem;
-       background-color: rgba(55, 197, 62, 0.3);
-       overflow-y: auto;
-       border-right: 1px solid #ccc;
-        color: #b388eb;
-      }
+  #sidebar {
+    position: absolute;
+    top: 61px;
+    left: 0;
+    bottom: 21px;
+    width: 320px;
+    overflow-y: auto;
+    background-color: #dde5b6; /* same as header */
+    padding: 1rem;
+    color: #b388eb; /* same as header text */
+    z-index: 10;
+  }
 
-      #sidebar h2 {
-        font-size: 1.2rem;
-        margin-top: 0;
-      }
+  #legend {
+    position: absolute;
+    bottom: 30px;
+    right: 10px;
+    background-color: rgba(238, 235, 88, 0.3);
+    padding: 0.8rem;
+    font-size: 0.8rem;
+    color: #0d3b66;
+    border-radius: 6px;
+    z-index: 10;
+  }
 
-      #map {
-        flex: 1;
-        position: relative;
-      }
+  #toggles {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 0.8rem;
+    font-size: 0.8rem;
+    color: #0d3b66;
+    border-radius: 6px;
+    z-index: 10;
+  }
 
-      .section {
-        margin-bottom: 2rem;
-      }
+  #map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
 
-      .footer {
-       text-align: center;
-       padding: 1rem;
-       background-color: rgba(55, 197, 62, 0.3); /* #227c9d + 85% 不透明度 */
-       font-size: 0.9rem;
-      color: #8093f1; /* 建议加上文字颜色，确保对比度 */
-      }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0.2rem;
+    background-color: #dde5b6; /* same as header */
+    font-size: 0.7rem;
+    color: #b388eb; /* same as header text */
+    z-index: 10;
+  }
 
-    </style>
-  </head>
-  <body>
-    <header>
-      Green Classrooms: After-School Learning in East Harlem Community Gardens
-    </header>
+  .legend-color {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+</style>
 
-    <main>
-      <div id="sidebar">
-        <div class="section">
-          <h2>Welcome</h2>
-          <p>This platform maps and explores the relationship between community gardens and after-school programs in East Harlem. By visualizing spatial data on green spaces and youth educational facilities, it reveals opportunities to support children's growth, learning, and wellbeing through nature-based urban design.</p>
-        </div>
-
-        <div class="section">
-          <h2>Instructions</h2>
-          <ul>
-            <li>Click points on the map to see details.</li>
-            <li>Click anywhere to generate a 5-minute walk zone.</li>
-            <li>Use this as a resource for your design proposals.</li>
-          </ul>
-        </div>
-
-        <div class="section">
-          <h2>Data Layers</h2>
-          <p>• Community Gardens<br>• Education Systems<br>• Isochrone Zones</p>
-        </div>
+</head>
+<body>
+  <header>
+    <span>Green Classrooms: After-School Learning in East Harlem Community Gardens</span>
+    <div id="toggles">
+      <label><input type="checkbox" id="toggleGardens" checked /> Gardens</label>
+      <label><input type="checkbox" id="toggleEducation" checked /> Education</label>
+    </div>
+  </header>
+  
+  <div id="sidebar">
+    <h2>Explore</h2>
+    <input type="text" id="search" placeholder="Search...">
+    <select id="typeFilter">
+      <option value="">All Types</option>
+      <option value="education">Educational Institutions</option>
+      <option value="garden">Community Gardens</option>
+    </select>
+    
+    <div id="timeControl">
+      <label><strong>Time</strong></label><br/>
+      <div id="currentTimeDisplay">--:--</div>
+      <label for="customTime">Select Time:</label>
+      <div class="timeInputWrapper">
+       <input type="time" id="customTime" />
       </div>
 
-      <div id="map"></div>
-    </main>
-
-    <div class="footer">
-       Shuxian Peng, Alexandra Gordon | ARCH 6133 Advanced Synthesis Places / Platforms | Cornell University | © 2025
     </div>
+    
+    <!-- ✅ 移动到这里 -->
+    <div id="buttonContainer">
+      <button id="useLocation">Use My Location</button>
+      <button id="clearSelection">Clear Selection</button>
+    </div>
+    
+    <ul id="featureList"></ul>
+  
+    <div id="intersectResults"></div>
+  </div>
+  
 
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
-    <script src="map.js"></script>
-  </body>
+  <div id="legend">
+    <h4>Legend</h4>
+    <p><span class="legend-color" style="background:#17c3b2;"></span>Community Garden</p>
+    <p><span class="legend-color" style="background:#fe6d73;"></span>Education Site</p>
+    <p><span class="legend-color" style="background:#ffcb77;"></span>5-min Isochrone</p>
+  </div>
+
+  <div id="toggles">
+    <label><input type="checkbox" id="toggleGardens" checked /> Gardens</label>
+    <label><input type="checkbox" id="toggleEducation" checked /> Education</label>
+  </div>
+
+  <div id="map"></div>
+
+  <div id="isochronePopup" class="isochrone-popup hidden"></div>
+
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+  <script src="map.js"></script>
+<div class="footer">Shuxian Peng, Alexandra Gordon | ARCH 6133 Advanced Synthesis Places / Platforms | Cornell University | © 2025</div>
+</body>
 </html>
