@@ -1,0 +1,806 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -73.93806817093765,
+            40.80110371981407
+          ]
+        },
+        "properties": {
+          "name of institution": "Kennedy Children's Center",
+          "address": "2212 3rd Ave 2nd Floor, New York, NY 10035",
+          "hours": {
+            "Sunday": null,
+            "Monday": {
+              "open": "09:00",
+              "close": "14:30"
+            },
+            "Tuesday": {
+              "open": "09:00",
+              "close": "14:30"
+            },
+            "Wednesday": {
+                "open": "09:00",
+                "close": "14:30"
+            },
+            "Thursday": {
+                "open": "09:00",
+                "close": "14:30"
+            },
+            "Friday": {
+                "open": "09:00",
+                "close": "14:30"
+            },
+            "Saturday": null
+          }
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -73.93833959005696,
+            40.79495501596914
+          ]
+        },
+        "properties": {
+          "name of institution": "P.S. 102 Jacques Cartier",
+          "address": "315 E 113th St, New York, NY 10029",
+          "hours": {
+            "Sunday": null,
+            "Monday": {
+              "open": "08:30",
+              "close": "14:50"
+            },
+            "Tuesday": {
+              "open": "08:30",
+              "close": "14:50"
+            },
+            "Wednesday": {
+                "open": "08:30",
+                "close": "14:50"
+            },
+            "Thursday": {
+                "open": "08:30",
+                "close": "14:50"
+            },
+            "Friday": {
+                "open": "08:30",
+                "close": "14:30"
+            },
+            "Saturday": null
+          }
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -73.93170860023136,
+            40.79740901711544
+          ]
+        },
+        "properties": {
+          "name of institution": "Mt. Carmel-Holy Rosary School Catholic Elementary School ",
+          "address": "371 Pleasant Ave, New York, NY 10035",
+          "hours": {
+            "Sunday": null,
+            "Monday": {
+              "open": "07:30",
+              "close": "16:00"
+            },
+            "Tuesday": {
+              "open": "07:30",
+              "close": "16:00"
+            },
+            "Wednesday": {
+                "open": "07:30",
+                "close": "16:00"
+              },
+            "Thursday": {
+                "open": "07:30",
+                "close": "16:00"
+              },
+            "Friday": {
+                "open": "07:30",
+                "close": "16:00"
+              },
+            "Saturday": null
+          }
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -73.93608224174571,
+            40.79760207128454
+          ]
+        },
+        "properties": {
+          "name of institution": "P.S. 155 William Paca",
+          "address": "319 E 117th St, New York, NY 10035",
+          "hours": {
+            "Sunday": null,
+            "Monday": {
+              "open": "09:00",
+              "close": "14:20"
+            },
+            "Tuesday": {
+              "open": "09:00",
+              "close": "14:20"
+            },
+            "Wednesday": {
+                "open": "09:00",
+                "close": "14:20"
+            },
+            "Thursday": {
+                "open": "09:00",
+                "close": "14:20"
+             },
+            "Friday": {
+                "open": "09:00",
+                "close": "14:20"
+            },
+            "Saturday": null
+          }
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -73.93391433081428,
+            40.799307199656184
+          ]
+        },
+        "properties": {
+          "name of institution": "Harlem Village Academy East Charter School",
+          "address": "2351 1st Ave, New York, NY 10035",
+          "hours": {
+            "Sunday": null,
+            "Monday": {
+              "open": "07:30",
+              "close": "16:30"
+            },
+            "Tuesday": {
+              "open": "07:30",
+              "close": "16:30"
+            },
+            "Wednesday": {
+                "open": "07:30",
+                "close": "16:30"
+            },
+            "Thursday": {
+                "open": "07:30",
+                "close": "16:30"
+             },
+            "Friday": {
+                "open": "07:30",
+                "close": "13:00"
+            },
+            "Saturday": null
+          }
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -73.93394489019703,
+            40.79927728598845
+          ]
+        },
+        "properties": {
+          "name of institution": "River East Elementary School",
+          "address": "2351 1st Ave, New York, NY 10035",
+          "hours": {
+            "Sunday": null,
+            "Monday": {
+              "open": "08:00",
+              "close": "15:05"
+            },
+            "Tuesday": {
+              "open": "08:00",
+              "close": "15:05"
+            },
+            "Wednesday": {
+                "open": "08:00",
+                "close": "15:05"
+            },
+            "Thursday": {
+                "open": "08:00",
+                "close": "15:05"
+             },
+            "Friday": {
+                "open": "08:00",
+                "close": "15:05"
+            },
+            "Saturday": null
+          }
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -73.94180447886355,
+            40.79317277781587
+          ]
+        },
+        "properties": {
+          "name of institution": "New York Bilingual Institute",
+          "address": "219 E 109th St, New York, NY 10029",
+          "hours": {
+            "Sunday": null,
+            "Monday": {
+              "open": "08:00",
+              "close": "15:00"
+            },
+            "Tuesday": {
+              "open": "08:00",
+              "close": "15:00"
+            },
+            "Wednesday": {
+                "open": "08:00",
+                "close": "15:00"
+            },
+            "Thursday": {
+                "open": "08:00",
+                "close": "15:00"
+             },
+            "Friday": {
+                "open": "08:00",
+                "close": "15:00"
+            },
+            "Saturday": null
+          }
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -73.93438993114391,
+            40.79482803330241
+          ]
+        },
+        "properties": {
+          "name of institution": "Storefront Academy Harlem",
+          "address": "445 E 115th St, New York, NY 10029",
+          "hours": {
+            "Sunday": {
+              "open": "07:45",
+              "close": "15:45"
+            },
+            "Monday": {
+              "open": "07:45",
+              "close": "15:45"
+            },
+            "Tuesday": {
+              "open": "07:45",
+              "close": "15:45"
+            },
+            "Wednesday": {
+              "open": "07:45",
+              "close": "15:45"
+            },
+            "Thursday": {
+              "open": "07:45",
+              "close": "15:45"
+            },
+            "Friday": {
+              "open": "07:45",
+              "close": "15:45"
+            },
+            "Saturday": null
+          }
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -73.94055442777768,
+            40.79504487595993
+          ]
+        },
+        "properties": {
+          "name of institution": "Our Lady Queen of Angels School",
+          "address": "229 E 112th St, New York, NY 10029",
+          "hours": {
+            "Sunday": null,
+            "Monday": {
+              "open": "06:00",
+              "close": "18:00"
+            },
+            "Tuesday": {
+              "open": "06:00",
+              "close": "18:00"
+            },
+            "Wednesday": {
+                "open": "06:00",
+                "close": "18:00"
+              },
+            "Thursday": {
+              "open": "06:00",
+              "close": "18:00"
+            },
+            "Friday": {
+                "open": "06:00",
+                "close": "18:00"
+              },
+            "Saturday": null
+          }
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -73.94073012765035,
+            40.799259720842414
+          ]
+        },
+        "properties": {
+          "name of institution": "St Paul School",
+          "address": "114 E 118th St, New York, NY 10035",
+          "hours": {
+            "Sunday": null,
+            "Monday": {
+              "open": "07:00",
+              "close": "16:00"
+            },
+            "Tuesday": {
+              "open": "07:00",
+              "close": "16:00"
+            },
+            "Wednesday": {
+                "open": "07:00",
+                "close": "16:00"
+              },
+            "Thursday": {
+              "open": "07:00",
+              "close": "16:00"
+            },
+            "Friday": {
+                "open": "07:00",
+                "close": "16:00"
+              },
+            "Saturday": null
+            }
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -73.9392001740046,
+            40.8011390144152
+          ]
+        },
+        "properties": {
+          "name of institution": "PS/MS 007 Samuel Stern School",
+          "address": "160 E 120th St, New York, NY 10035",
+          "hours": {
+            "Sunday": null,
+            "Monday": {
+              "open": "08:00",
+              "close": "14:20"
+            },
+            "Tuesday": {
+              "open": "08:00",
+              "close": "14:20"
+            },
+            "Wednesday": {
+                "open": "08:00",
+                "close": "14:20"
+            },
+            "Thursday": {
+                "open": "08:00",
+                "close": "14:20"
+             },
+            "Friday": {
+                "open": "08:00",
+                "close": "14:20"
+            },
+            "Saturday": null
+          }
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -73.93378915468044,
+            40.79912773216683
+          ]
+        },
+        "properties": {
+          "name of institution": "Harlem Village Academies East Elementary and Middle",
+          "address": "2351 1st Ave 4th floor, New York, NY 10035",
+          "hours": {
+            "Sunday": null,
+            "Monday": {
+              "open": "07:30",
+              "close": "16:30"
+            },
+            "Tuesday": {
+              "open": "07:30",
+              "close": "16:30"
+            },
+            "Wednesday": {
+                "open": "07:30",
+                "close": "16:30"
+            },
+            "Thursday": {
+                "open": "07:30",
+                "close": "16:30"
+             },
+            "Friday": {
+                "open": "07:30",
+                "close": "13:00"
+            },
+            "Saturday": null
+          }
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -73.94086537847934,
+            40.79734575143056
+          ]
+        },
+        "properties": {
+          "name of institution": "P.S./M.S. 57 M ( James Weldon Johnson School)",
+          "address": "176 E 115th St, New York, NY 10029",
+          "hours": {
+            "Sunday": null,
+            "Monday": {
+              "open": "08:00",
+              "close": "14:30"
+            },
+            "Tuesday": {
+              "open": "08:00",
+              "close": "14:30"
+            },
+            "Wednesday": {
+                "open": "08:00",
+                "close": "14:30"
+            },
+            "Thursday": {
+                "open": "08:00",
+                "close": "14:30"
+             },
+            "Friday": {
+                "open": "08:00",
+                "close": "14:30"
+            },
+            "Saturday": null
+          }
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -73.93362475259691,
+            40.79918370313948
+          ]
+        },
+        "properties": {
+          "name of institution": "John S Roberts Junior High School",
+          "address": "2345 1st Ave, New York, NY 10035",
+          "hours": {
+            "Sunday": null,
+            "Monday": {
+              "open": "08:00",
+              "close": "15:00"
+            },
+            "Tuesday": {
+              "open": "08:00",
+              "close": "15:00"
+            },
+            "Wednesday": {
+                "open": "08:00",
+                "close": "15:00"
+            },
+            "Thursday": {
+                "open": "08:00",
+                "close": "15:00"
+             },
+            "Friday": {
+                "open": "08:00",
+                "close": "15:00"
+            },
+            "Saturday": null
+          }
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -73.9373551741175,
+            40.8001132580401
+          ]
+        },
+        "properties": {
+          "name of institution": "Public School 96 (P.S. 096 JOSEPH LANZETTA)",
+          "address": "216 E 120th St, New York, NY 10035",
+          "hours": {
+            "Sunday": null,
+            "Monday": {
+              "open": "08:00",
+              "close": "14:30"
+            },
+            "Tuesday": {
+              "open": "08:00",
+              "close": "14:30"
+            },
+            "Wednesday": {
+                "open": "08:00",
+                "close": "14:30"
+            },
+            "Thursday": {
+                "open": "08:00",
+                "close": "14:30"
+             },
+            "Friday": {
+                "open": "08:00",
+                "close": "14:30"
+            },
+            "Saturday": null
+          }
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -73.93044545764562,
+            40.7968795113787
+          ]
+        },
+        "properties": {
+          "name of institution": "P.S./M.S. 206 Jose Celso Barbosa School",
+          "address": "508 E 120th St, New York, NY 10035",
+          "hours": {
+            "Sunday": null,
+            "Monday": {
+              "open": "09:00",
+              "close": "14:20"
+            },
+            "Tuesday": {
+              "open": "09:00",
+              "close": "14:20"
+            },
+            "Wednesday": {
+                "open": "09:00",
+                "close": "14:20"
+            },
+            "Thursday": {
+                "open": "09:00",
+                "close": "14:20"
+             },
+            "Friday": {
+                "open": "09:00",
+                "close": "14:20"
+            },
+            "Saturday": null
+          }
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -73.93302968820616,
+            40.79427150714153
+          ]
+        },
+        "properties": {
+          "name of institution": "Isaac Newton Middle School For Math & Science",
+          "address": "260 Pleasant Ave, New York, NY 10029",
+          "hours": {
+            "Sunday": null,
+            "Monday": {
+              "open": "08:00",
+              "close": "15:00"
+            },
+            "Tuesday": {
+              "open": "08:00",
+              "close": "15:00"
+            },
+            "Wednesday": {
+                "open": "08:00",
+                "close": "15:00"
+            },
+            "Thursday": {
+                "open": "08:00",
+                "close": "15:00"
+             },
+            "Friday": {
+                "open": "08:00",
+                "close": "15:00"
+            },
+            "Saturday": null
+          }
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -73.93505041532002,
+            40.80154366904121
+          ]
+        },
+        "properties": {
+          "name of institution": "Harlem Prep Charter School",
+          "address": "240 E 123rd St, New York, NY 10035",
+          "hours": {
+            "Sunday": null,
+            "Monday": {
+              "open": "07:30",
+              "close": "16:30"
+            },
+            "Tuesday": {
+              "open": "07:30",
+              "close": "16:30"
+            },
+            "Wednesday": {
+                "open": "07:30",
+                "close": "16:30"
+            },
+            "Thursday": {
+                "open": "07:30",
+                "close": "16:30"
+             },
+            "Friday": {
+                "open": "07:30",
+                "close": "13:00"
+            },
+            "Saturday": null
+          }
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -73.9333009015159,
+            40.79451511851525
+          ]
+        },
+        "properties": {
+          "name of institution": "Manhattan Center for Science and Mathematics",
+          "address": "260 Pleasant Ave, New York, NY 10029",
+          "hours": {
+            "Sunday": null,
+            "Monday": {
+              "open": "08:20",
+              "close": "14:40"
+            },
+            "Tuesday": {
+              "open": "08:20",
+              "close": "14:40"
+            },
+            "Wednesday": {
+                "open": "08:20",
+              "close": "14:40"
+            },
+            "Thursday": {
+                "open": "08:20",
+              "close": "14:40"
+             },
+            "Friday": {
+                "open": "08:20",
+              "close": "14:40"
+            },
+            "Saturday": null
+          }
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -73.93889000344404,
+            40.80001540929272
+          ]
+        },
+        "properties": {
+          "name of institution": "Siberman School of Social Work at Hunter College",
+          "address": "2180 3rd Ave, New York, NY 10035",
+          "hours": {
+            "Sunday": null,
+            "Monday": {
+              "open": "10:00",
+              "close": "17:00"
+            },
+            "Tuesday": {
+              "open": "10:00",
+              "close": "17:00"
+            },
+            "Wednesday": {
+                "open": "10:00",
+                "close": "17:00"
+            },
+            "Thursday": {
+                "open": "10:00",
+                "close": "17:00"
+             },
+            "Friday": {
+                "open": "10:00",
+                "close": "17:00"
+            },
+            "Saturday": null
+          }
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -73.93773952111177,
+            40.80059381450678
+          ]
+        },
+        "properties": {
+          "name of institution": "Sunshine Learning Center of 3rd Ave LLC",
+          "address": "2205 3rd Ave, New York, NY 10035",
+          "hours": {
+            "Sunday": null,
+            "Monday": {
+              "open": "07:30",
+              "close": "18:30"
+            },
+            "Tuesday": {
+              "open": "07:30",
+              "close": "18:30"
+            },
+            "Wednesday": {
+                "open": "07:30",
+              "close": "18:30"
+            },
+            "Thursday": {
+                "open": "07:30",
+              "close": "18:30"
+             },
+            "Friday": {
+                "open": "07:30",
+              "close": "18:30"
+            },
+            "Saturday": null
+          }
+        }
+      }
+    ]
+  }
